@@ -24,4 +24,10 @@ class Main extends CI_Controller {
 		$data["view"] = "dashboard";
 		$this->load->view('content/body_content',$data);
 	}
+	
+	function newTopic()
+	{
+		$data["view"] = "f_v3w/new_topic";
+		$this->load->view('content/body_content',$data);
+	}
 }
