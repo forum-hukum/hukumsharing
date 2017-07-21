@@ -412,7 +412,9 @@ class Auth extends CI_Controller {
 	// create a new user
 	public function create_user()
     {
-        $this->data['title'] = $this->lang->line('create_user_heading');
+
+
+      /*  $this->data['title'] = $this->lang->line('create_user_heading');
 
         if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
         {
@@ -517,7 +519,9 @@ class Auth extends CI_Controller {
             $this->load->view('content/header');
             $this->_render_page('auth/create_user', $this->data);
             $this->load->view('content/footer');
-        }
+        }*/
+        $data["view"] = "auth/create_user";
+		$this->load->view('content/body_content',$data);
     }
 
 	// edit a user

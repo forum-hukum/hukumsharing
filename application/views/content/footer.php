@@ -1,4 +1,5 @@
- <footer>
+             </section>
+            <footer>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-1 col-xs-3 col-sm-2 logo "><a href="#"><img src="<?php echo base_url()?>f_style/images/logo.jpg" alt=""  /></a></div>
