@@ -295,7 +295,7 @@ ul.socialicons li a:hover {
     font-family: 'Open Sans Bold', sans-serif;
     margin: 0;
     padding: 20px;
-	background-color:#6da5cc;
+	background-color:#9caebb;
 
 }
 
@@ -309,6 +309,10 @@ ul.socialicons li a:hover {
     padding:2px;
 }
 
+ul.cats li a {
+	text-decoration:none;
+}
+
 ul.cats li {
     list-style: none;
     display: block;
@@ -318,7 +322,14 @@ ul.cats li {
 	background-color:rgba(228,225,225,0.43);
 	padding:10px;
 	margin-bottom:1px;
-	text-indent:10px;
+	text-indent:5px;
+}
+
+ul.cats li:hover {
+	background-color:#e6e4e4;
+	cursor:pointer;
+	border-left-style: solid;
+    border-left-width: 10px;
 }
 
 ul.cats {
@@ -328,9 +339,20 @@ ul.cats {
 
 ul.cats li a {
     font-size: 14px;
-    color: #363838;
+    color: #545858;
     font-family: 'Open Sans Light', sans-serif;
     line-height: 30px;
+}
+
+.articel-creator{
+	margin-top: -10px;
+    margin-bottom: -10px;
+	font-size: smaller;
+}
+
+.consultant-profile{
+	margin-top: -4px;
+    margin-right: 10px;
 }
 
 ul.cats .badge {
@@ -341,6 +363,13 @@ ul.cats .badge {
     margin-top: 7px;
 }
 
+.number-trending{
+	background-color: #b6bec1;
+    border-radius: 50%;
+    font-size: x-large;
+    padding: 5px;
+    color: #696969;
+}
 
 .sidebarblock .blocktxt {
 
