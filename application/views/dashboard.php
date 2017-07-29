@@ -308,7 +308,6 @@
 											<p class="articel-creator">Sabtu, 02 Agustus 2017</p></li>
                                     </ul>
                                 </div>
-                                </div>
                             </div>
 
                             <!-- -->
