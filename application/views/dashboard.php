@@ -320,7 +320,7 @@
 											<table>
 												<tr>
 													<td>
-														<img src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
+														<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
 													</td>
 													<td>
 														<a href="#"><b> Sahala Tobing </b></a> <br/>
@@ -333,7 +333,7 @@
 											<table>
 												<tr>
 													<td>
-														<img src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
+														<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
 													</td>
 													<td>
 														<a href="#"><b> Ricat Simbolon </b></a> <br/> 
@@ -346,7 +346,7 @@
 											<table>
 												<tr>
 													<td>
-														<img src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
+														<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
 													</td>
 													<td>
 														<a href="#"><b> Ono </b>
@@ -360,7 +360,7 @@
 											<table>
 												<tr>
 													<td>
-														<img src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
+														<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
 													</td>
 													<td>
 														<a href="#"><b> Elvan </b></a> <br/> 
@@ -373,7 +373,7 @@
 											<table>
 												<tr>
 													<td>
-														<img src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
+														<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
 													</td>
 													<td>
 														<a href="#"><b> Agust </b></a> <br/> 
