@@ -291,11 +291,11 @@ ul.socialicons li a:hover {
 
 .sidebarblock h3 {
     color: #363838;
-    font-size: 14px;
+    font-size: 20px;
     font-family: 'Open Sans Bold', sans-serif;
     margin: 0;
     padding: 20px;
-
+	background-color:#6da5cc;
 
 }
 
@@ -315,6 +315,10 @@ ul.cats li {
     margin:0;
     padding:0;
     line-height: 30px;
+	background-color:rgba(228,225,225,0.43);
+	padding:10px;
+	margin-bottom:1px;
+	text-indent:10px;
 }
 
 ul.cats {
