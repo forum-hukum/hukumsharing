@@ -21,6 +21,7 @@
 
         <!-- get jQuery from the google apis -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+        <script type="text/javascript" src="<?php echo base_url()?>f_style/js/jquery.form.js"></script>
  
 
         <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
@@ -28,6 +29,10 @@
         <script type="text/javascript" src="<?php echo base_url()?>f_style/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
         <script src="<?php echo base_url()?>f_style/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url()?>f_style/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url()?>f_style/js/validate.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.js"></script>
+        
 
 
         <!-- LOOK THE DOCUMENTATION FOR MORE INFORMATIONS -->
@@ -48,8 +53,9 @@
 
             });	//ready
 
+            var site_url = "<?php echo base_url()?>";
         </script>
-
+        <script src="<?php echo base_url()?>f_style/js/content.js"></script>
         <!-- END REVOLUTION SLIDER -->
     </body>
 </html>

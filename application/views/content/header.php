@@ -27,6 +27,7 @@
 
         <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>f_style/rs-plugin/css/settings.css" media="screen" />
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.css" rel="stylesheet">
 
     </head>
     <body>
@@ -74,7 +75,7 @@
                         </div>
                         <div class="col-lg-4 col-xs-12 col-sm-5 col-md-4 avt">
                             <div class="stnt pull-left">                            
-                                <form action="<?php echo base_url()?>topic" method="post" class="form">
+                                <form action="<?php echo base_url()?>create_topic" method="post" class="form">
                                     <button class="btn btn-primary">Start New Topic</button>
                                 </form>
                             </div>

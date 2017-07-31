@@ -51,7 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'main';
 $route['login'] = 'auth/login';
-$route['topic'] = 'main/newTopic';
+$route['create_topic'] = 'main/newTopic';
+$route['topic/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'main/topic/$1/$2/$3/$4/$5';
 $route['forgot_password'] = 'auth/forgot_password';
 $route['signup'] = 'auth/create_user';
 $route['404_override'] = '';

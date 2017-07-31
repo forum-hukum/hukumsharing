@@ -1,14 +1,14 @@
-<div class="container">
+<div class="container" style="margin-top: 20px;">
                     <div class="row">
                         <div class="col-lg-8 col-md-8">
 
-
-
                             <!-- POST -->
                             <div class="post">
-                                <form action="#" class="form newtopic" method="post">
+
+                                <form action="#" class="form newtopic" id="form_new_topic" method="post">
                                     <div class="topwrap">
                                         <div class="userinfo pull-left">
+
                                             <div class="avatar">
                                                 <img src="<?php echo base_url()?>f_style/images/avatar4.jpg" alt="" />
                                                 <div class="status red">&nbsp;</div>
@@ -21,49 +21,33 @@
                                         <div class="posttext pull-left">
 
                                             <div>
-                                                <input type="text" placeholder="Enter Topic Title" class="form-control" />
+                                                <input type="text" placeholder="Masukkan Judul Topik" class="form-control" name="title_topic" id="title_topic"/>
                                             </div>
 
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-6">
-                                                    <select name="category" id="category"  class="form-control" >
-                                                        <option value="" disabled selected>Select Category</option>
-                                                        <option value="op1">Option1</option>
-                                                        <option value="op2">Option2</option>
+                                                    <select name="category" id="category"  class="form-control" onChange="getSubCategory(this.value);">
+                                                        <option value="">Pilih Kategori</option>
+                                                        <?php 
+                                                                foreach ($getCategory as $key => $value) {
+                                                                        
+                                                                        echo "<option value='".$value->ID."'>+ ".$value->Name."</option>";
+
+                                                                }
+
+                                                        ?>
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6">
-                                                    <select name="subcategory" id="subcategory"  class="form-control" >
-                                                        <option value="" disabled selected>Select Subcategory</option>
-                                                        <option value="op1">Option1</option>
-                                                        <option value="op2">Option2</option>
-                                                    </select>
+                                                    <select name="subcategory" id="subcategory"  class="form-control" ><option>Sub Kategori</option></select>
                                                 </div>
                                             </div>
 
                                             <div>
-                                                <textarea name="desc" id="desc" placeholder="Description"  class="form-control" ></textarea>
+                                                <textarea name="desc" id="desc" placeholder="Description"  class="textarea form-control" ></textarea>
                                             </div>
                                             <div class="row newtopcheckbox">
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div><p>Who can see this?</p></div>
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-6">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox" id="everyone" /> Everyone
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox" id="friends"  /> Only Friends
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                              
                                                 <div class="col-lg-6 col-md-6">
                                                     <div>
                                                         <p>Share on Social Networks</p>
@@ -110,7 +94,7 @@
 
                                         <div class="pull-right postreply">
                                             <div class="pull-left smile"><a href="#"><i class="fa fa-smile-o"></i></a></div>
-                                            <div class="pull-left"><button type="submit" class="btn btn-primary">Post</button></div>
+                                            <div class="pull-left"><button type="submit" class="btn btn-primary" id="btnpost">Post</button></div>
                                             <div class="clearfix"></div>
                                         </div>
 
@@ -119,10 +103,10 @@
                                     </div>
                                 </form>
                             </div><!-- POST -->
-
+                             <div class="message_result"></div>
                             <div class="row similarposts">
                                 <div class="col-lg-10"><i class="fa fa-info-circle"></i> <p>Similar Posts according to your <a href="#">Topic Title</a>.</p></div>
-                                <div class="col-lg-2 loading"><i class="fa fa-spinner"></i></div>
+                                <div class="col-lg-2 loading"><i class="fa fa-spinner " aria-hidden="true"></i></div>
 
                             </div>
 
