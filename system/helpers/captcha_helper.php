@@ -70,8 +70,8 @@ if ( ! function_exists('create_captcha'))
 			'img_height'	=> '30',
 			'font_path'	=> '',
 			'expiration'	=> 7200,
-			'word_length'	=> 8,
-			'font_size'	=> 16,
+			'word_length'	=> 4,
+			'font_size'	=> 20,
 			'img_id'	=> '',
 			'pool'		=> '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
 			'colors'	=> array(
