@@ -122,7 +122,7 @@
                             </div>
 
                             <!-- -->
-							<div class="container">
+							<div class="sidebarblock">
 								<h3>Konsultan Terpopuler</h3>
 									<div class="divline"></div>
 									<div class="blocktxt">
