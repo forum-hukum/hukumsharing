@@ -151,18 +151,17 @@ class Main extends CI_Controller {
 
 			
 			date_default_timezone_set('Asia/Jakarta');
-			$config = Array(
-							   "protocol" => "smtp",
-							   "smtp_host" => "webmail.hostinger.co.id",
-							   "smtp_user" => "support@forum-hukum.com",
-							   "smtp_pass" => "A3sDfYtf4Kq2",
-							   "smtp_port" => 587,
-							   "validate"  => "FALSE",
-							   "mailtype" => "html",
-							   "charset" => "utf-8",
-							   "newline" => "\n",
-							   "wordwrap" => true
-			);
+				
+
+
+				$config['protocol'] = "smtp";
+				$config['smtp_host'] = "http://webmail.hostinger.co.id";
+				$config['smtp_port'] = "587";
+				$config['smtp_user'] = "support@forum-hukum.com";//also valid  Google Apps Accounts
+				$config['smtp_pass'] = "A3sDfYtf4Kq2";
+				$config['charset'] = "utf-8";
+				$config['mailtype'] = "html";
+				$config['newline'] = "\r\n";
 				  
 			  $this->email->initialize( $config );
 			  $this->email->from("support@forum-hukum.com","forum-hukum");
