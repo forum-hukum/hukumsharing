@@ -154,7 +154,7 @@ $captcha = array(
 									 <div class="error_message"><?php echo form_error($confirm_password['name']); ?></div>
 									
 									
-									<div class="g-recaptcha" data-sitekey="6LcfQisUAAAAANKxV3WYUgfQ8WxuYZZNcQ0WSQ4a"></div>
+									<div class="g-recaptcha" data-sitekey="6LeWQysUAAAAAP4rXpFIZxW01mZUX21UqfybEyEr"></div>
 									
 									
 									 <?php if ($captcha_registration) {
