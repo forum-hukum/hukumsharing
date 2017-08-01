@@ -480,7 +480,6 @@ class Auth extends CI_Controller
 	function _send_email($type, $email, &$data)
 	{
 		$this->load->library('email');
-		
 		$config['protocol'] = "smtp";
 		$config['smtp_host'] = "http://webmail.hostinger.co.id";
 		$config['smtp_port'] = "587";
@@ -490,8 +489,6 @@ class Auth extends CI_Controller
 		$config['mailtype'] = "html";
 		$config['newline'] = "\r\n";
 		$this->email->initialize($config);
-
-		
 		$this->email->from($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
 		$this->email->reply_to($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
 		$this->email->to($email);
@@ -499,6 +496,8 @@ class Auth extends CI_Controller
 		$this->email->message($this->load->view('email/'.$type.'-html', $data, TRUE));
 		$this->email->set_alt_message($this->load->view('email/'.$type.'-txt', $data, TRUE));
 		$this->email->send();
+		
+		echo $this->email->print_debugger();
 	}
 
 	/**
