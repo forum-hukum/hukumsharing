@@ -61,12 +61,6 @@ class Topic_model extends CI_Model
 		return $getTopic->row();
 	}
 	
-	function getTopicByLink2($que_url)
-	{
-		$getTopic = $this->db->query("SELECT * from tb_question where `link_question` = '".$que_url."'");
-		return $getTopic->row();
-	}
-	
 }
 
 /* End of file users.php */
