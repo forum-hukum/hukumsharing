@@ -13,7 +13,8 @@ class Main extends CI_Controller {
 	
 		parent::__construct();
 		$this->load->model("topic_model");
-		$this->load->library('form_validation');
+		$this->load->library(array('form_validation','email'));
+		
 
 	
 	}
@@ -133,10 +134,54 @@ class Main extends CI_Controller {
 
 		$getTopicByLink = $this->topic_model->getTopicByLink($que_url);
 
+		$data["getAnswers"] = $this->topic_model->getAnswersByQuestion( $getTopicByLink->ID );
 		$data["topicResult"] = $getTopicByLink;
 		$data["view"] 		= "f_v3w/view_topic";
 		$this->load->view('content/body_content',$data);
 	}
+
+
+		// function send_email($subject,$email,$message){
+		function send_email(){
+
+
+			$subject = "testing forum";
+			$email = "ogan_mi@yahoo.com";
+			$message = "test test";
+
+			
+			date_default_timezone_set('Asia/Jakarta');
+			$config = Array(
+							   "protocol" => "smtp",
+							   "smtp_host" => "http://webmail.hostinger.co.id",
+							   "smtp_user" => "support@forum-hukum.com",
+							   "smtp_pass" => "A3sDfYtf4Kq2",
+							   "smtp_port" => 587,
+							   "validate"  => "FALSE",
+							   "mailtype" => "html",
+							   "charset" => "utf-8",
+							   "newline" => "\n",
+							   "wordwrap" => true
+			);
+				  
+			  $this->email->initialize( $config );
+			  $this->email->from("support@forum-hukum.com","forum-hukum");
+			  $this->email->subject($subject);
+			  $this->email->to($email);
+			  $this->email->message($message);
+			  $sending =  $this->email->send();
+			  
+			  if(!$sending){
+			  	$status = false;
+			  }else{
+			  	$status = true;
+			  }
+
+			  echo $status;
+			  // return $status;
+
+	}
+	
 
 
 

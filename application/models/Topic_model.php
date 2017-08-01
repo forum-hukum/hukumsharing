@@ -34,7 +34,7 @@ class Topic_model extends CI_Model
 	function findWord()
 	{
 		$words = $this->db->query("SELECT * from tb_worst_word");
-		return $word->result();  
+		return $word->result();
 	}
 
 	function set_link($id_topic,$data)
@@ -59,6 +59,12 @@ class Topic_model extends CI_Model
 	{
 		$getTopic = $this->db->query("SELECT * from tb_question where `link_question` = '".$que_url."'");
 		return $getTopic->row();
+	}
+
+	function getAnswersByQuestion($id_question)
+	{
+		$getAns = $this->db->query("SELECT * from tb_answer where `QuestionID` = '".$id_question."'");
+		return $getAns->result();
 	}
 	
 }
