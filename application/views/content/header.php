@@ -28,6 +28,7 @@
         <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>f_style/rs-plugin/css/settings.css" media="screen" />
         <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.css" rel="stylesheet">
+         <link href="<?php echo base_url()?>f_style/css/view_style.css" rel="stylesheet">
 
     </head>
     <body>
