@@ -481,7 +481,7 @@ class Auth extends CI_Controller
 	{
 		$this->load->library('email');
 		
-		config['protocol'] = "smtp";
+		$config['protocol'] = "smtp";
 		$config['smtp_host'] = "http://webmail.hostinger.co.id";
 		$config['smtp_port'] = "587";
 		$config['smtp_user'] = "support@forum-hukum.com";//also valid  Google Apps Accounts
