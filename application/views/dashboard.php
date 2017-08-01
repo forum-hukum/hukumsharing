@@ -122,113 +122,81 @@
                             </div>
 
                             <!-- -->
-                            <div class="sidebarblock">
-                                <h3>My Active Threads</h3>
-                                <div class="divline"></div>
-                                <div class="blocktxt">
-                                    <a href="#">This Dock Turns Your iPhone Into a Bedside Lamp</a>
-                                </div>
-                                <div class="divline"></div>
-                                <div class="blocktxt">
-                                    <a href="#">Who Wins in the Battle for Power on the Internet?</a>
-                                </div>
-                                <div class="divline"></div>
-                                <div class="blocktxt">
-                                    <a href="#">Sony QX10: A Funky, Overpriced Lens Camera for Your Smartphone</a>
-                                </div>
-                                <div class="divline"></div>
-                                <div class="blocktxt">
-                                    <a href="#">FedEx Simplifies Shipping for Small Businesses</a>
-                                </div>
-                                <div class="divline"></div>
-                                <div class="blocktxt">
-                                    <a href="#">Loud and Brave: Saudi Women Set to Protest Driving Ban</a>
-                                </div>
-                            </div>
-
+							<div class="container">
+								<h3>Konsultan Terpopuler</h3>
+									<div class="divline"></div>
+									<div class="blocktxt">
+									  <ul class="cats">
+											<li>
+												<table>
+													<tr>
+														<td>
+															<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
+														</td>
+														<td>
+															<a href="#"><b> Sahala Tobing </b></a> <br/>
+															<p class="articel-creator">Level : Pakar </p>
+															<p class="articel-creator">Jumlah Point : 12000</p></li>
+														</td>
+													 </tr>
+												</table> 
+											<li>
+												<table>
+													<tr>
+														<td>
+															<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
+														</td>
+														<td>
+															<a href="#"><b> Ricat Simbolon </b></a> <br/> 
+															<p class="articel-creator">Level : Pakar </p>
+															<p class="articel-creator">Point : 10000</p> </li>
+														</td>
+													 </tr>
+												</table> 
+											<li>
+												<table>
+													<tr>
+														<td>
+															<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
+														</td>
+														<td>
+															<a href="#"><b> Ono </b>
+															<p class="articel-creator">Level : Ahli </p>
+															<p class="articel-creator">Point : 5000</p>
+														</td>
+													 </tr>
+												</table> 
+											</li>
+											<li>
+												<table>
+													<tr>
+														<td>
+															<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
+														</td>
+														<td>
+															<a href="#"><b> Elvan </b></a> <br/> 
+															<p class="articel-creator">Level : Ahli </p>
+															<p class="articel-creator">Jumlah Point : 200</p></li>
+														</td>
+													 </tr>
+												</table> 
+											<li>
+												<table>
+													<tr>
+														<td>
+															<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
+														</td>
+														<td>
+															<a href="#"><b> Agust </b></a> <br/> 
+															<p class="articel-creator">Level : Praktisi </p>
+															<p class="articel-creator">Jumlah Point : 100</p></li>
+														</td>
+													 </tr>
+												</table> 
+										</ul>
+									</div>
+							</div>
 
                         </div>
                     </div>
                 </div>
-
-
-
-                <div class="container">
-                    <h3>Konsultan Terpopuler</h3>
-						<div class="divline"></div>
-						<div class="blocktxt">
-						  <ul class="cats">
-								<li>
-									<table>
-										<tr>
-											<td>
-												<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
-											</td>
-											<td>
-												<a href="#"><b> Sahala Tobing </b></a> <br/>
-												<p class="articel-creator">Level : Pakar </p>
-												<p class="articel-creator">Jumlah Point : 12000</p></li>
-											</td>
-										 </tr>
-									</table> 
-								<li>
-									<table>
-										<tr>
-											<td>
-												<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
-											</td>
-											<td>
-												<a href="#"><b> Ricat Simbolon </b></a> <br/> 
-												<p class="articel-creator">Level : Pakar </p>
-												<p class="articel-creator">Point : 10000</p> </li>
-											</td>
-										 </tr>
-									</table> 
-								<li>
-									<table>
-										<tr>
-											<td>
-												<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
-											</td>
-											<td>
-												<a href="#"><b> Ono </b>
-												<p class="articel-creator">Level : Ahli </p>
-												<p class="articel-creator">Point : 5000</p>
-											</td>
-										 </tr>
-									</table> 
-								</li>
-								<li>
-									<table>
-										<tr>
-											<td>
-												<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
-											</td>
-											<td>
-												<a href="#"><b> Elvan </b></a> <br/> 
-												<p class="articel-creator">Level : Ahli </p>
-												<p class="articel-creator">Jumlah Point : 200</p></li>
-											</td>
-										 </tr>
-									</table> 
-								<li>
-									<table>
-										<tr>
-											<td>
-												<img class="consultant-profile" src="<?php echo base_url()?>f_style/images/avatar3.jpg" alt="" />
-											</td>
-											<td>
-												<a href="#"><b> Agust </b></a> <br/> 
-												<p class="articel-creator">Level : Praktisi </p>
-												<p class="articel-creator">Jumlah Point : 100</p></li>
-											</td>
-										 </tr>
-									</table> 
-							</ul>
-						</div>
-                </div>
-
-
-           
-
-           
