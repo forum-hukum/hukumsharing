@@ -7,8 +7,8 @@
 | These details are used in emails sent by authentication library.
 |--------------------------------------------------------------------------
 */
-$config['website_name'] = 'Your project';
-$config['webmaster_email'] = 'webmaster@your-site.com';
+$config['website_name'] = 'FORUM HUKUM';
+$config['webmaster_email'] = 'support@forum-hukum.com';
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ $config['webmaster_email'] = 'webmaster@your-site.com';
 |--------------------------------------------------------------------------
 */
 $config['phpass_hash_portable'] = FALSE;
-$config['phpass_hash_strength'] = 8;
+$config['phpass_hash_strength'] = 4;
 
 /*
 |--------------------------------------------------------------------------
@@ -128,8 +128,8 @@ $config['captcha_case_sensitive'] = TRUE;
 */
 $config['use_ssl'] = FALSE;
 $config['use_recaptcha'] = FALSE;
-$config['recaptcha_public_key'] = '6LddQisUAAAAANw8St_fKyTH0tpnoF0xCy3wju_T';
-$config['recaptcha_private_key'] = '6LddQisUAAAAADd8K9-ooxk165TLTI95KIx73rpt';
+$config['recaptcha_public_key'] = '';
+$config['recaptcha_private_key'] = '';
 
 /*
 |--------------------------------------------------------------------------
