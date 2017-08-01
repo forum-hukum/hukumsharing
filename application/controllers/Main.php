@@ -153,7 +153,7 @@ class Main extends CI_Controller {
 			date_default_timezone_set('Asia/Jakarta');
 			$config = Array(
 							   "protocol" => "smtp",
-							   "smtp_host" => "http://webmail.hostinger.co.id",
+							   "smtp_host" => "webmail.hostinger.co.id",
 							   "smtp_user" => "support@forum-hukum.com",
 							   "smtp_pass" => "A3sDfYtf4Kq2",
 							   "smtp_port" => 587,
@@ -170,7 +170,7 @@ class Main extends CI_Controller {
 			  $this->email->to($email);
 			  $this->email->message($message);
 			  $sending =  $this->email->send();
-			  
+
 			  if(!$sending){
 			  	$status = false;
 			  }else{
