@@ -480,19 +480,15 @@ class Auth extends CI_Controller
 	function _send_email($type, $email, &$data)
 	{
 		$this->load->library('email');
-		
-		$config['protocol'] = "gsmtp";
-		$config['smtp_host'] = "ssl://smtp.googlemail.com";
-		$config['smtp_port'] = "465";
-		$config['smtp_user'] = "forumhukum2017@gmail.com";//also valid  Google Apps Accounts
-		$config['smtp_pass'] = "localhostroot";
+		$config['protocol'] = "smtp";
+		$config['smtp_host'] = "http://webmail.hostinger.co.id";
+		$config['smtp_port'] = "587";
+		$config['smtp_user'] = "support@forum-hukum.com";//also valid  Google Apps Accounts
+		$config['smtp_pass'] = "A3sDfYtf4Kq2";
 		$config['charset'] = "utf-8";
 		$config['mailtype'] = "html";
 		$config['newline'] = "\r\n";
 		$this->email->initialize($config);
-
-
-		
 		$this->email->from($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
 		$this->email->reply_to($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
 		$this->email->to($email);
