@@ -27,7 +27,7 @@
 
         <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>f_style/rs-plugin/css/settings.css" media="screen" />
-
+		<script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
             <div class="headernav">

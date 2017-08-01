@@ -152,7 +152,11 @@ $captcha = array(
 									 <?php echo form_label('Confirm Password', $confirm_password['id']); ?>
 									 <p><?php echo form_password($confirm_password); ?></p>
 									 <div class="error_message"><?php echo form_error($confirm_password['name']); ?></div>
-
+									
+									
+									<div class="g-recaptcha" data-sitekey="6LddQisUAAAAANw8St_fKyTH0tpnoF0xCy3wju_T"></div>
+									
+									
 									 <?php if ($captcha_registration) {
 											if ($use_recaptcha) { ?>
 										<tr>
@@ -165,6 +169,8 @@ $captcha = array(
 												<div class="recaptcha_only_if_audio"><a href="javascript:Recaptcha.switch_type('image')">Get an image CAPTCHA</a></div>
 											</td>
 										</tr>
+										
+										
 										<tr>
 											<td>
 												<div class="recaptcha_only_if_image">Enter the words above</div>

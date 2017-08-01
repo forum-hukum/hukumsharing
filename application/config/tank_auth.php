@@ -128,8 +128,8 @@ $config['captcha_case_sensitive'] = TRUE;
 */
 $config['use_ssl'] = FALSE;
 $config['use_recaptcha'] = FALSE;
-$config['recaptcha_public_key'] = '';
-$config['recaptcha_private_key'] = '';
+$config['recaptcha_public_key'] = '6LddQisUAAAAANw8St_fKyTH0tpnoF0xCy3wju_T';
+$config['recaptcha_private_key'] = '6LddQisUAAAAADd8K9-ooxk165TLTI95KIx73rpt';
 
 /*
 |--------------------------------------------------------------------------
