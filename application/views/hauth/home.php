@@ -277,7 +277,7 @@
 						}
 					?>
 	                  <tr>
-	                  	<td class="pItem"><strong><?=ucfirst($key)?>:</strong> <?=(filter_var($value, FILTER_VALIDATE_URL) !== false) ?  '<a href="'.$value.'" target="_blank">'.$value.'</a>' : $value;?></td>
+	                  	<td class="pItem"><strong><?=ucfirst($key)?>:</strong> <?=(filter_var($value, FILTER_VALIDATE_URL) !== false) ?  '<a href="'.base_url().$value.'" target="_blank">'.$value.'</a>' : $value;?></td>
 	                  </tr>
 					<? endforeach; ?>
 	                </tbody>
