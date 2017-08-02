@@ -31,7 +31,8 @@ $config =
 
 			"Google" => array (
 				"enabled" => true,
-				"keys"    => array ( "id" => "94286932178-q3n8lgmfq9kvhlcoj6vg3uvaccafldbh.apps.googleusercontent.com", "secret" => "0rhjD4KEuoK18m9qH-iiphj_" ),
+				"keys"    => array ( "id" => "94286932178-dmimb8kl04j4i98u28eagsvjr7t04iho.apps.googleusercontent.com", "secret" => "AA3L42TQMxhkLt7gputlKAGp" ),
+				"redirect_url" => "http://forum-hukum.com/forum-hukum/hukumsharing/hauth/login/Google"
 			),
 
 			"Facebook" => array (
