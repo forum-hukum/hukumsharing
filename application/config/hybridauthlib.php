@@ -22,7 +22,7 @@ $config =
 
 			"Yahoo" => array (
 				"enabled" => true,
-				"keys"    => array ( "id" => "", "secret" => "" ),
+				"keys"    => array ( "id" => "dj0yJmk9QTY3c1d6WW1wRGF5JmQ9WVdrOVZraHFTVmhNTkcwbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD00Mw--", "secret" => "eb04dcfdf10c455ac8f2cedd25c1dd1ffaec029b" ),
 			),
 
 			"AOL"  => array (
@@ -31,7 +31,7 @@ $config =
 
 			"Google" => array (
 				"enabled" => true,
-				"keys"    => array ( "id" => "94286932178-8e0uapu4lcn3q4cr33jn35n6lketo05r.apps.googleusercontent.com", "secret" => "7FueyrNMq6Odj5k_1hG48vzD" ),
+				"keys"    => array ( "id" => "94286932178-8e0uapu4lcn3q4cr33jn35n6lketo05r.apps.googleusercontent.com ", "secret" => "7FueyrNMq6Odj5k_1hG48vzD" ),
 			),
 
 			"Facebook" => array (
