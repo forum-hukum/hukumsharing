@@ -31,7 +31,7 @@ $config =
 
 			"Google" => array (
 				"enabled" => true,
-				"keys"    => array ( "id" => "94286932178-8e0uapu4lcn3q4cr33jn35n6lketo05r.apps.googleusercontent.com", "secret" => "7FueyrNMq6Odj5k_1hG48vzD" ),
+				"keys"    => array ( "id" => "94286932178-fb71jtedepfdrg0vosugqt3j8vgdjjf5.apps.googleusercontent.com", "secret" => "crw3vJGUnXbVVKhRSuDUhwBu" ),
 			),
 
 			"Facebook" => array (
