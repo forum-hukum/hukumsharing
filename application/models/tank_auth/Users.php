@@ -12,8 +12,8 @@
  */
 class Users extends CI_Model
 {
-	private $table_name			= 'users';			// user accounts
-	private $profile_table_name	= 'user_profiles';	// user profiles
+	private $table_name			= 'tb_users';			// user accounts
+	private $profile_table_name	= 'tb_user_profiles';	// user profiles
 
 	function __construct()
 	{
@@ -86,6 +86,20 @@ class Users extends CI_Model
 		if ($query->num_rows() == 1) return $query->row();
 		return NULL;
 	}
+	
+	
+	/**
+	
+	* Get User firstname to session_cache_expire
+	
+	*/
+	
+	function get_firstname_by_id($id){
+		$this->db->where('id', $id);
+		$query = $this->db->get($this->profile_table_name);
+		if ($query->num_rows() == 1) return $query->row()->first_name;
+		return NULL;
+	}
 
 	/**
 	 * Check if username available for registering
@@ -125,14 +139,20 @@ class Users extends CI_Model
 	 * @param	bool
 	 * @return	array
 	 */
-	function create_user($data, $activated = TRUE)
+	function create_user($data, $activated = TRUE,  $firstname, $lastname )
 	{
 		$data['created'] = date('Y-m-d H:i:s');
 		$data['activated'] = $activated ? 1 : 0;
 
 		if ($this->db->insert($this->table_name, $data)) {
 			$user_id = $this->db->insert_id();
-			if ($activated)	$this->create_profile($user_id);
+			//if ($activated)	$this->create_profile($user_id); change to
+			$data_profile = array(
+				'user_id'	=> $user_id,
+				'first_name' => $firstname,
+				'last_name'	=> $lastname
+			);
+			$this->create_profile($data_profile);
 			return array('user_id' => $user_id);
 		}
 		return NULL;
@@ -166,7 +186,7 @@ class Users extends CI_Model
 			$this->db->where('id', $user_id);
 			$this->db->update($this->table_name);
 
-			$this->create_profile($user_id);
+			//$this->create_profile($user_id); remove because has been created when login
 			return TRUE;
 		}
 		return FALSE;
@@ -375,10 +395,10 @@ class Users extends CI_Model
 	 * @param	int
 	 * @return	bool
 	 */
-	private function create_profile($user_id)
+	private function create_profile($data)
 	{
-		$this->db->set('user_id', $user_id);
-		return $this->db->insert($this->profile_table_name);
+		//$this->db->set('user_id', $user_id);
+		return $this->db->insert($this->profile_table_name, $data);
 	}
 
 	/**

@@ -71,7 +71,9 @@ class Tank_auth
 						$this->ci->session->set_userdata(array(
 								'user_id'	=> $user->id,
 								'username'	=> $user->username,
+								'email'		=> $user->email,
 								'status'	=> ($user->activated == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
+								'firstname'	=> $this->ci->users->get_firstname_by_id($user->id),
 						));
 
 						if ($user->activated == 0) {							// fail - not activated
@@ -159,7 +161,7 @@ class Tank_auth
 	 * @param	bool
 	 * @return	array
 	 */
-	function create_user($username, $email, $password, $email_activation)
+	function create_user($username, $email, $password, $email_activation, $firstname, $lastname)
 	{
 		if ((strlen($username) > 0) AND !$this->ci->users->is_username_available($username)) {
 			$this->error = array('username' => 'auth_username_in_use');
@@ -184,7 +186,7 @@ class Tank_auth
 			if ($email_activation) {
 				$data['new_email_key'] = md5(rand().microtime());
 			}
-			if (!is_null($res = $this->ci->users->create_user($data, !$email_activation))) {
+			if (!is_null($res = $this->ci->users->create_user($data, !$email_activation, $firstname, $lastname))) {
 				$data['user_id'] = $res['user_id'];
 				$data['password'] = $password;
 				unset($data['last_ip']);
