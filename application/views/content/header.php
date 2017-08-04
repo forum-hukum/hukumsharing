@@ -83,7 +83,7 @@
                             <div class="env pull-left"><i class="fa fa-envelope"></i></div>
 
                             <div class="avatar pull-left dropdown">
-                                <a data-toggle="dropdown" href="#"><img src="<?php echo base_url()?>f_style/images/avatar.jpg" alt="" /></a> <b class="caret"></b>
+                                <a data-toggle="dropdown" href="#"><img src="<?php echo base_url()?>f_style/images/avatar.jpg" alt="" /><?php echo $this->tank_auth->get_fullname();?> </a> <b class="caret"></b>
                                 <div class="status green">&nbsp;</div>
                                 <ul class="dropdown-menu" role="menu">
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Profile</a></li>
