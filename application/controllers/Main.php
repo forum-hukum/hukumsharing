@@ -21,8 +21,9 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
+
+		
 		$data["getTopic"]	= $this->topic_model->getListTopic();
-	
 		$data["view"] = "dashboard";
 		$this->load->view('content/body_content',$data);
 	}
@@ -152,6 +153,7 @@ class Main extends CI_Controller {
 
 
 		$data["getAnswers"] = $this->topic_model->getAnswersByQuestion( $getTopicByLink->ID);
+		
 		$data["topicResult"] = $getTopicByLink;
 		$data["view"] 		= "f_v3w/view_topic";
 		$this->load->view('content/body_content',$data);
@@ -212,6 +214,8 @@ class Main extends CI_Controller {
 			  // return $status;
 
 	}
+
+
 	
 
 
