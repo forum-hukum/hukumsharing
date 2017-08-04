@@ -66,6 +66,23 @@ class Topic_model extends CI_Model
 		$getAns = $this->db->query("SELECT * from tb_answer where `QuestionID` = '".$id_question."'");
 		return $getAns->result();
 	}
+
+	function increase_view($aV)
+	{
+		
+		$this->db->insert("tb_view_question",$aV);
+	}
+
+	function checkView($id_question,$ip,$date_now)
+	{
+		$get = $this->db->query("SELECT * from tb_view_question where id_question = '".$id_question."' AND ip_user = '".$ip."' AND date = '".$date_now."'  ");
+		if($get->num_rows() >= 1 )
+		{
+			return true;
+		}else{
+			return false;
+		}
+	}
 	
 }
 

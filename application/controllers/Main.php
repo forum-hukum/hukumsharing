@@ -133,8 +133,25 @@ class Main extends CI_Controller {
 		$que_url =  $url1."/".$url2."/".$url3."/".$url4."/".$url5;
 
 		$getTopicByLink = $this->topic_model->getTopicByLink($que_url);
+		$ip = $this->input->ip_address();
+		$date_now = date('Y-m-d');
 
-		$data["getAnswers"] = $this->topic_model->getAnswersByQuestion( $getTopicByLink->ID );
+
+		$checkView = $this->topic_model->checkView($getTopicByLink->ID,$ip,$date_now);
+
+		if($checkView ==  false)
+		{
+
+			$aV["id_question"] 	= $getTopicByLink->ID;
+			$aV["ip_user"] 		= $ip;
+			$aV["date"] 		= $date_now;
+
+			$this->topic_model->increase_view($aV);
+		}
+
+
+
+		$data["getAnswers"] = $this->topic_model->getAnswersByQuestion( $getTopicByLink->ID);
 		$data["topicResult"] = $getTopicByLink;
 		$data["view"] 		= "f_v3w/view_topic";
 		$this->load->view('content/body_content',$data);
