@@ -45,7 +45,7 @@ class Topic_model extends CI_Model
 
 	function getListTopic()
 	{
-		$get = $this->db->query(" SELECT a.*,count(b.id_question) as count_view from tb_question as a JOIN tb_view_question as b ON b.id_question = a.ID GROUP BY a.ID ");
+		$get = $this->db->query(" SELECT a.*,count(b.id_question) as count_view from tb_question as a LEFT JOIN tb_view_question as b ON b.id_question = a.ID GROUP BY a.ID ");
 		return $get->result();
 	}
 
