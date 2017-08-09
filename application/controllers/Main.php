@@ -13,7 +13,8 @@ class Main extends CI_Controller {
 	
 		parent::__construct();
 		$this->load->model("topic_model");
-		$this->load->library(array('form_validation','email'));
+		$this->load->library(array('form_validation','email','tank_auth'));
+		$this->lang->load('tank_auth');	
 		
 
 	
@@ -30,12 +31,17 @@ class Main extends CI_Controller {
 	
 	function newTopic()
 	{
+		if($this->tank_auth->is_logged_in())
+		{
+			$getCategory  	 = $this->topic_model->getCategoryData();
+			$data["getCategory"]	= $getCategory;
+			$data["view"] 			= "f_v3w/new_topic";
+			$this->load->view('content/body_content',$data);
+		}else{
 
-		$getCategory  	 = $this->topic_model->getCategoryData();
+			redirect('auth/login');
+		}
 		
-		$data["getCategory"]	= $getCategory;
-		$data["view"] 			= "f_v3w/new_topic";
-		$this->load->view('content/body_content',$data);
 	}
 
 	function insertTopic()
@@ -152,10 +158,17 @@ class Main extends CI_Controller {
 
 
 
-		$data["getAnswers"] = $this->topic_model->getAnswersByQuestion( $getTopicByLink->ID);
+		#$data["getAnswers"] = $this->topic_model->getAnswersByQuestion( $getTopicByLink->ID );
 		
-		$data["topicResult"] = $getTopicByLink;
-		$data["view"] 		= "f_v3w/view_topic";
+		if ($this->session->flashdata('error')) {
+
+    		$data['error'] = $this->session->flashdata('error');
+		}
+		
+		$data["getAnswers"] 	= $this->topic_model->getAnswers($getTopicByLink->ID);
+		$data["que_url"] 		= $que_url;
+		$data["topicResult"]	= $getTopicByLink;
+		$data["view"] 			= "f_v3w/view_topic";
 		$this->load->view('content/body_content',$data);
 	}
 
@@ -213,6 +226,47 @@ class Main extends CI_Controller {
 			  echo $status;
 			  // return $status;
 
+	}
+
+
+	function insert_answer()
+	{
+		if($this->tank_auth->is_logged_in())
+		{
+
+			$this->form_validation->set_rules('reply', 'Kolom balasan', 'required');
+
+				$urlredir = "topic/".$_POST["urlredir"];
+
+				if ($this->form_validation->run() == TRUE)
+		        {
+
+		        		
+						$data["QuestionID"]  = $_POST["questionID"];
+						$data["Content"]  = htmlspecialchars($_POST["reply"]);
+						$data["UserID"] 	 = $this->session->userdata("user_id");
+						$data["CreatedBy"] = $this->session->userdata("firstname");
+						$data["CreatedDate"] = date("y-m-d h:m:s");
+
+						$this->topic_model->insertAnswers($data);
+
+		        }else{
+		        	  $this->session->set_flashdata('error', validation_errors());
+		        }
+				
+			
+				redirect($urlredir);
+
+
+		}else{
+
+			redirect('auth/login');
+		}
+		
+
+
+
+		
 	}
 
 

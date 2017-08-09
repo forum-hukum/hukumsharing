@@ -84,6 +84,19 @@ class Topic_model extends CI_Model
 		}
 	}
 
+	function insertAnswers($data)
+	{
+		$this->db->insert("tb_answer",$data);
+	}
+
+	function getAnswers($id_question)
+	{
+
+		$db = $this->db->query("SELECT * from tb_answer where QuestionID = '".$id_question."'");
+		return $db->result();
+
+	}
+
 	/*function count_view($id_question)
 	{
 		$get = $this->db->query("SELECT * from tb_view_question where id_question = '".$id_question."'");
