@@ -412,6 +412,18 @@ class Users extends CI_Model
 		$this->db->where('user_id', $user_id);
 		$this->db->delete($this->profile_table_name);
 	}
+	
+	
+	function update_image_of_user($id, $path)
+	{
+		//print_r($id);
+		//$this->db->set('image', $path);
+		$this->db->where('user_id', $id);
+		$this->db->update($this->profile_table_name, array(
+			'image' => $path
+		));
+	
+	}
 }
 
 /* End of file users.php */

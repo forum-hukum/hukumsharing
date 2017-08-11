@@ -641,6 +641,12 @@ class Tank_auth
 					$this->ci->config->item('login_attempt_expire', 'tank_auth'));
 		}
 	}
+	
+	function update_image_of_user($id, $path)
+	{		
+		
+		$this->ci->users->update_image_of_user($id, $path);
+	}
 }
 
 /* End of file Tank_auth.php */

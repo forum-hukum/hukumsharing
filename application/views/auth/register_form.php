@@ -112,8 +112,6 @@ $captcha = array(
                         </div>
                     </div>
                 </div>
-
-
                 <div class="container">
                     <div class="row">
 					<div class="col-lg-4 col-md-4">
@@ -152,7 +150,6 @@ $captcha = array(
                                     <div class="topwrap">
 									
                                         <div class="posttext pull-center">
-
                                             <div>
 												<?php echo form_input($first_name); ?>
 												<div class="error_message"><?php echo form_error($first_name['name']); ?><?php echo isset($errors[$first_name['name']])?$errors[$first_name['name']]:''; ?></div>
@@ -160,19 +157,15 @@ $captcha = array(
 											<div>
                                                 <?php echo form_input($last_name); ?>
 									 <div class="error_message"><?php echo form_error($last_name['name']); ?><?php echo isset($errors[$last_name['name']])?$errors[$last_name['name']]:''; ?></div>
-									 
                                             </div>
 											<div>
                                                 <?php echo form_input($email); ?>
 													<div class="error_message"><?php echo form_error($email['name']); ?><?php echo isset($errors[$email['name']])?$errors[$email['name']]:''; ?></div>
                                             </div>
-											
 											<div>
                                               <?php echo form_password($password); ?>
 									 <div class="error_message"><?php echo form_error($password['name']); ?></div>
                                             </div>
-											
-											
 											<div>
                                               <?php echo form_password($confirm_password); ?>
 												<div class="error_message"><?php echo form_error($confirm_password['name']); ?></div>
@@ -190,8 +183,6 @@ $captcha = array(
 												<div class="recaptcha_only_if_audio"><a href="javascript:Recaptcha.switch_type('image')">Get an image CAPTCHA</a></div>
 											</td>
 										</tr>
-										
-										
 										<tr>
 											<td>
 												<div class="recaptcha_only_if_image">Enter the words above</div>
@@ -215,18 +206,15 @@ $captcha = array(
 										</tr>
 										<?php }
 										} ?>
+										<p style="text-align:right" class="forgot-anchor"><?php echo anchor('/auth/login/', 'Login'); ?></p>
                                         </div>
                                         <div class="clearfix"></div>
-                                    </div>                    
-									
+                                    </div>  
                                     <div class="postinfobot">
                                         <div class="pull-right postreply">
 										<div class="clearfix"></div>
                                             <div class="pull-left"><input type="submit" class="btn btn-primary" name="submit" value="Register" style="background-color: #3276b1;"></div>
-                                            
                                         </div>
-
-
                                         <div class="clearfix"></div>
 										<br/>
                                     </div>

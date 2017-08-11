@@ -102,8 +102,9 @@ $captcha = array(
 													
 													<?php if ($this->config->item('allow_registration', 'tank_auth')) echo anchor('/auth/register/', 'Register'); ?>-->
                                                   </p>
+												 
                                                   <p style="text-align:right" class="forgot-anchor"><?php echo anchor('/auth/forgot_password/', 'Lupa Password?'); ?></p>
-												  
+												   <p style="text-align:right" class="forgot-anchor"><?php echo anchor('/auth/register/', 'Register'); ?></p>
 												  	<?php if ($show_captcha) {
 															if ($use_recaptcha) { ?>
 														<tr>
