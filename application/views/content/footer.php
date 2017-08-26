@@ -20,7 +20,8 @@
         </div>
 
         <!-- get jQuery from the google apis -->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script type="text/javascript" src="<?php echo base_url()?>f_style/js/jquery.form.js"></script>
  
 
@@ -29,7 +30,8 @@
         <script type="text/javascript" src="<?php echo base_url()?>f_style/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
         <script src="<?php echo base_url()?>f_style/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url()?>f_style/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url()?>f_style/js/jquery.auto-complete.min.js"></script>
+        
         <script src="<?php echo base_url()?>f_style/js/validate.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.js"></script>
         

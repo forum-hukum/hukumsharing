@@ -22,6 +22,7 @@
 
                                             <div>
                                                 <input type="text" placeholder="Masukkan Judul Topik" class="form-control" name="title_topic" id="title_topic"/>
+                                                
                                             </div>
 
                                             <div class="row">

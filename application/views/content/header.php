@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Forum :: Homeass Pagesss</title>
+        <title>Forum :: Home Page</title>
 
         <!-- Bootstrap -->
         <link href="<?php echo base_url()?>f_style/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,10 @@
         <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>f_style/rs-plugin/css/settings.css" media="screen" />
         <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.css" rel="stylesheet">
-         <link href="<?php echo base_url()?>f_style/css/view_style.css" rel="stylesheet">
+        <link href="<?php echo base_url()?>f_style/css/view_style.css" rel="stylesheet">
+        <link href="<?php echo base_url()?>f_style/css/jquery.auto-complete.css" rel="stylesheet">
+         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 
     </head>
     <body>

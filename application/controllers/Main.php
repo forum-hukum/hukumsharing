@@ -89,8 +89,12 @@ class Main extends CI_Controller {
 
 				$data["link_question"] = date('y/m/d')."/".time()."/".$link;
 				$this->topic_model->set_link($insert_id,$data);
-				$feed["status"] 	= TRUE;
-				$feed["message"]	= "Topic berhasil";
+
+				
+
+				$feed["status"] 		= TRUE;
+				$feed["message"]		= "Topic berhasil";
+				$feed["url_redirect"]	= "topic/".date('y/m/d')."/".time()."/".$link;
 
 			}else{
 
@@ -267,6 +271,23 @@ class Main extends CI_Controller {
 
 
 		
+	}
+
+
+	function getTitle()
+	{
+
+		$TitleName = $_GET['q'];
+
+		$this->db->like('Title',$TitleName);
+		$get = $this->db->get('tb_question');
+		
+
+		$TitleList = array();
+		foreach($get->result() as $row) {
+			$TitleList[] = $row->Title;
+		}
+		echo json_encode($TitleList);
 	}
 
 
