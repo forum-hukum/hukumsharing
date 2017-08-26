@@ -53,7 +53,7 @@ color:red;
                                                 <div class="col-md-12 col-lg-12">
                                                     <div class="major-provider google-login col-md-5 col-lg-5 " data-provider="google">
                                                         <div class="icon-container"><span class="icon" style=""></span></div>
-                                                        <div class="text" style="color: white"><i class="fa fa-google-plus"></i><span>  Google</span></div>
+                                                        <div class="text" style="color: white"><i class="fa fa-google-plus"></i><span>  Googleee</span></div>
                                                         <br class="cbt">
                                                     </div>
 
