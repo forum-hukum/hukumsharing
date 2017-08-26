@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Forum :: Home Page</title>
+        <title>Forum :: Homeass Pagesss</title>
 
         <!-- Bootstrap -->
         <link href="<?php echo base_url()?>f_style/css/bootstrap.min.css" rel="stylesheet">
